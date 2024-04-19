@@ -1,10 +1,9 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
+
 import 'package:crud/Constand/constant_image.dart';
 import 'package:crud/main.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:pinput/pinput.dart';
+
 
 class Task3 extends StatefulWidget {
   const Task3({super.key});
@@ -47,6 +46,8 @@ List F = [
 
 ];
 // int total = 0;
+
+
 List<int> like=[];
 
 
@@ -90,19 +91,19 @@ class _Task3State extends State<Task3> {
                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                children: [
                                  Image.asset(F[index]["image"]),
-                                 InkWell(
-                                     onTap:() {
-                                       setState(() {
-                                         if(like.contains(index)){
-                                           like.remove(index);
-                                         }else{
-                                           like.add(index);
-                                           print(like);
-                                         }
-                                       });
-                                     },child: like.contains(index)
-                                    ? SvgPicture.asset(imageconstant.Blacklove,width: w*0.05,color: Colors.white,)
-                                     : SvgPicture.asset(F[index]["image1"],width: w*0.05,)),
+                                 // InkWell(
+                                 //     onTap:() {
+                                 //       setState(() {
+                                 //         if(like.contains(index)){
+                                 //           like.remove(index);
+                                 //         }else{
+                                 //           like.add(index);
+                                 //           print(like);
+                                 //         }
+                                 //       });
+                                 //     },child: like.contains(index)
+                                 //    ? SvgPicture.asset(imageconstant.Blacklove,width: w*0.05,color: Colors.white,)
+                                 //     : SvgPicture.asset(F[index]["image1"],width: w*0.05,)),
 
 
 
